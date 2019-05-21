@@ -20,7 +20,7 @@
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	
     <!-- Custom narrow bootstrap -->
-    <!-- <link href="css/jumbotron-narrow.css" rel="stylesheet"> -->
+    <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet"> 
   </head>
   <body>
     <br>
@@ -49,15 +49,15 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Soundboard 17</h1>
+        <h1>Soundboard Pal</h1>
 	<p class="lead">
-		Upload sounds, share them, or keep them private! 
+		Upload sounds and share them 
 	</p>
 	<p><a class="btn btn-lg btn-success" href="views/publicSoundboards.php" role="button">View sounds</a></p>
       </div>
 
       <footer class="footer">
-        <p>&copy; CSE 135 Summer 2017 : Team 17</p>
+        <p>&copy; Mario </p>
       </footer>
 
     </div> <!-- /container -->
