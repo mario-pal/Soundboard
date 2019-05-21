@@ -1,0 +1,66 @@
+<?php
+
+	session_start();
+	$username = $_SESSION['user'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Soundboard index page">
+    <meta name="author" content="Nicholas Yee">
+
+    <title>Soundboard 17</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom narrow bootstrap -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs pull-right">
+	    <li role="presentation" class="active"><a href="index.php">Home</a></li>
+		<?php 
+			if(isset($_SESSION['user'])){
+				echo "<li role=\"presentation\"><a href=\"views/dashboard.php\">";
+				echo $username; 
+				echo "'s Dashboard</a></li> \n";
+				echo "<li role=\"presentation\"><a href=\"model/processLogout.php\">";
+				echo "Logout</a></li> \n";
+				
+			}
+			else{
+	echo "<li role=\"presentation\"><a href=\"views/login.php\">Login</a><li> \n";	
+	echo "<li role=\"presentation\"><a href=\"views/registration.php\">Sign up</a><li> \n";	
+			}
+		 ?>	
+	</ul>
+	</nav>
+
+      </div>
+
+      <div class="jumbotron">
+        <h1>Soundboard 17</h1>
+	<p class="lead">
+		Upload sounds, share them, or keep them private! 
+	</p>
+	<p><a class="btn btn-lg btn-success" href="views/publicSoundboards.php" role="button">View sounds</a></p>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; CSE 135 Summer 2017 : Team 17</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
