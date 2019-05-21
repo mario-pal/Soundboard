@@ -28,7 +28,7 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-tabs justify-content-right">
-	    <li role="presentation" class="nav-item"><a href="index.php">Home</a></li>
+	    <li class="nav-item"><a href="index.php">Home</a></li>
 		<?php 
 			if(isset($_SESSION['user'])){
 				echo "<li role=\"presentation\"><a href=\"views/dashboard.php\">";
@@ -39,8 +39,8 @@
 				
 			}
 			else{
-	echo "<li role=\"nav-item\"><a href=\"views/login.php\">Login</a><li> \n";	
-	echo "<li role=\"nav-item\"><a href=\"views/registration.php\">Sign up</a><li> \n";	
+	echo "<li class=\"nav-item\"><a href=\"views/login.php\">Login</a><li> \n";	
+	echo "<li class=\"nav-item\"><a href=\"views/registration.php\">Sign up</a><li> \n";	
 			}
 		 ?>	
 	</ul>
