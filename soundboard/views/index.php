@@ -12,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Soundboard index page">
-    <meta name="author" content="Nicholas Yee">
+    <meta name="Author" content="Mario">
 
-    <title>Soundboard 17</title>
+    <title>Soundboard Pal</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	
     <!-- Custom narrow bootstrap -->
-    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <!-- <link href="css/jumbotron-narrow.css" rel="stylesheet"> -->
   </head>
   <body>
     <br>
