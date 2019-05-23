@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	require_once '../../../config.inc';
+	//require_once '../../../config.inc';
 
 	$limit = 5;
 	if(isset($_GET["page"])){ $page = $_GET["page"]; } else { $page=1; };
@@ -19,7 +19,7 @@
     <meta http-equiv = "Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name = "description" content="Public soundboard viewing page">
-    <meta name="author" content="Mario Palma">
+    <meta name="author" content="Mario">
     <title>Public Soundboards</title>
     <!---->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
