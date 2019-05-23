@@ -28,19 +28,19 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-tabs justify-content-right">
-	    <li class="nav-item"><a href="index.php">Home</a></li>
+	    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
 		<?php 
 			if(isset($_SESSION['user'])){
-				echo "<li role=\"presentation\"><a href=\"views/dashboard.php\">";
+				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/dashboard.php\">";
 				echo $username; 
 				echo "'s Dashboard</a></li> \n";
-				echo "<li role=\"presentation\"><a href=\"model/processLogout.php\">";
+				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"model/processLogout.php\">";
 				echo "Logout</a></li> \n";
 				
 			}
 			else{
-	echo "<li class=\"nav-item\"><a href=\"views/login.php\">Login</a><li> \n";	
-	echo "<li class=\"nav-item\"><a href=\"views/registration.php\">Sign up</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/login.php\">Login</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/registration.php\">Sign up</a><li> \n";	
 			}
 		 ?>	
 	</ul>
@@ -62,6 +62,6 @@
 
     </div> <!-- /container -->
 
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="bootstrap/dist/js/bootstrap.min.js"></script>-->
   </body>
 </html>
