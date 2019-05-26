@@ -36,7 +36,7 @@
       <nav>
         <div class = pull-left> Public Soundboards </div>
         <ul class="nav nav-tabs">
-	  <li class = "nav-item"><a class=/"nav-link/" href="../index.php">Home</a></li>
+	  <li class = "nav-item"><a class="nav-link" href="./index.php">Home</a></li>
 	    <?php
 	    	if(isset($_SESSION['user'])){
 			echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./dashboard.php\">";
@@ -98,9 +98,9 @@
     $row = mysqli_fetch_row($rs_result);
     $total_records = $row[0];
     $total_pages = ceil($total_records / $limit);
-    $pagLink = "<nav><ul class='pagination'>";
+    $pagLink = "<nav><ul class=\"pagination\">";
     for ($i = 1; $i<=$total_pages; $i++){
-    	$paglink .= "<li><a href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
+    	$pagLink .= "<li><a href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
     };
     echo $pagLink . "</ul></nav>";
 ?>
