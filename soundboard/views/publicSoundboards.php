@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	require_once '/../../../../config.inc';
+	require_once '../../../../config.inc';
 
 	$limit = 5;
 	if(isset($_GET["page"])){ $page = $_GET["page"]; } else { $page=1; };
