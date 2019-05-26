@@ -1,5 +1,5 @@
 <?php
-	#require_once '../../config.inc';	
+	require_once '../../config.php';	
 
 	// Render the view
 	include("./soundboard/views/index.php");
