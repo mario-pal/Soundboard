@@ -22,11 +22,11 @@
     <meta name="author" content="Mario">
     <title>Public Soundboards</title>
     <!---->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
 
     <script type = "text/javascript" charset = "utf8" src = "../../js/jquery-2.0.3.js"></script>
-    <script type = "text/javascript" src = "bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type = "text/javascript" src = "../../bootstrap/dist/js/bootstrap.min.js"></script>
     <script src = "../../js/paginationFunc.js"></script>
   </head>
   <body>
@@ -102,7 +102,7 @@
     for ($i = 1; $i<=$total_pages; $i++){
     	$paglink .= "<li><a href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
     };
-    echo $paglink . "</ul></nav>";
+    echo $pagLink . "</ul></nav>";
 ?>
 
     <a class="btn btn-success" href="./addSoundboard.php" role="button">Add Soundboard</a>
