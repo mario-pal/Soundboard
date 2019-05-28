@@ -36,7 +36,7 @@
 
 
     <!--Critical CSS above the fold -->
-    <style>
+<!--    <style>
 * { box-sizing: border-box; }
 html { font-family: sans-serif; text-size-adjust: 100%; font-size: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 body { margin: 0px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.42857; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px; }
@@ -75,7 +75,7 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; line
 .btn-lg, .btn-group-lg > .btn { padding: 10px 16px; font-size: 18px; line-height: 1.33333; border-radius: 6px; }
 button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
 .jumbotron .btn { font-size: 21px; padding: 14px 24px; }	
-   </style>
+   </style> -->
 
   </head>
 
@@ -128,7 +128,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 	
 	<form action="../model/processAccount.php" method="GET">
 		<div class="form-group">
-		<input type="text" pattern="[a-zA-Z0-9]{1,29}" 
+		<!--<input type="text" pattern="[a-zA-Z0-9]{1,29}" 
 			title="Alphanumeric characters only" class="form-control"
 			name="first_name" placeholder="FIRST NAME" required> <br> <br>
 
@@ -137,7 +137,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 			title="Alphanumeric characters only" class="form-control" 
 			name="last_name" placeholder="LAST NAME" required> <br> <br>
 
-		<!--<div class="form-group">
 		<input type="email" class="form-control" 
 			name="email" placeholder="EMAIL" required> <br><br>-->
 
