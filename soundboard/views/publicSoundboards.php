@@ -115,7 +115,7 @@
   </body>
 </html>
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(){
 $('.pagination').pagination({
 	item: <?php echo $total_records;?>,
@@ -125,4 +125,4 @@ $('.pagination').pagination({
 		hrefTextPrefix : 'publicSoundboards.php?page='
 	});
 });
-</script>-->
+</script>
