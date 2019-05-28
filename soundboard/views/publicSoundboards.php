@@ -35,7 +35,7 @@
       <div class = "header clearfix">
       <nav>
         <ul class="nav nav-tabs">
-	  <li class = "nav-item"><a class="nav-link" href="./index.php">Home</a></li>
+	  <li class = "nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
 	    <?php
 	    	if(isset($_SESSION['user'])){
 			echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./dashboard.php\">";
