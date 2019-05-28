@@ -40,7 +40,7 @@
 			}
 			else{
 	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/login.php\">Login</a><li> \n";	
-	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/registration.php\">Sign up</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./registration.php\">Sign up</a><li> \n";	
 			}
 		 ?>	
 	</ul>
