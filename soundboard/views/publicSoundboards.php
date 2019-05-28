@@ -34,7 +34,6 @@
     <div class = "container">
       <div class = "header clearfix">
       <nav>
-        <div class = pull-left> Public Soundboards </div>
         <ul class="nav nav-tabs">
 	  <li class = "nav-item"><a class="nav-link" href="./index.php">Home</a></li>
 	    <?php
@@ -56,6 +55,10 @@
         </ul>
       </nav>
       </div>
+      
+	<div class = pull-left> 
+		Public Soundboards 
+	</div>
 
     <div class ="jumbotron">
       <table class="table" align="left">
@@ -112,7 +115,7 @@
   </body>
 </html>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 $(document).ready(function(){
 $('.pagination').pagination({
 	item: <?php echo $total_records;?>,
@@ -122,4 +125,4 @@ $('.pagination').pagination({
 		hrefTextPrefix : 'publicSoundboards.php?page='
 	});
 });
-</script>
+</script>-->
