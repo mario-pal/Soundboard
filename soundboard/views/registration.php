@@ -143,12 +143,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 			title="Alphanumeric characters where input is longer than 3"
 				class="form-control"
 			name="username" placeholder="USERNAME" required> <br><br>
+		</div>
 
 		<div class="form-group">
 		<input type="password" pattern="[a-zA-Z0-9]{5,29}" 
 			title="Alphanumeric characters where input is longer than 5"
 			class="form-control"
 			name="password" placeholder="PASSWORD" required> <br><br>
+		</div>
 		
 		<div class="form-group">
 		<input type="password" pattern="[a-zA-Z0-9]{5,29}"
@@ -156,6 +158,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 			class="form-control"
 			name="confirm_password" placeholder="CONFIRM PASSWORD" required> <br>
 		<br>
+		</div>
+
 		<input type="submit" class="btn btn-lg btn-success"  value="Create account">
 	</form> 
 
