@@ -18,21 +18,19 @@
 
     <title>Sign up</title>
     <!-- defer loading of CSS snippet, not compatible in some browsers -->
-	<script> 
+	<!--<script> 
 		var l = document.createElement('link');
 		l.rel='stylesheet';
-		l.href='../css/all.min.css';
+		l.href='../../bootstrap/dist/css/all.min.css';
 		l.media='defer';
 		l.addEventListener('load', function() { l.media=''; }, false);
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(l, s);
-	</script>
+	</script>-->
 
     <!-- if no JS is enabled, fall back is added here-->
-	<noscript>
 	    <!-- Bootstrap core CSS -->
-	    <link href="../css/all.min.css" rel="stylesheet">  
-	
-	</noscript>
+	    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">  
+	    <link href="../../bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">  
 
 
     <!--Critical CSS above the fold -->
@@ -127,8 +125,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 	</p>
 	
 	<form action="../model/processAccount.php" method="GET">
-		<div class="form-group">
-		<!--<input type="text" pattern="[a-zA-Z0-9]{1,29}" 
+		<!--<div class="form-group">
+		<input type="text" pattern="[a-zA-Z0-9]{1,29}" 
 			title="Alphanumeric characters only" class="form-control"
 			name="first_name" placeholder="FIRST NAME" required> <br> <br>
 
