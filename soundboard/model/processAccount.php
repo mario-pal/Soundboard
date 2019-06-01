@@ -44,8 +44,8 @@
 		die();
 	}
 
-	/*else{ 
-	$first_name = $_GET['first_name'];
+	else{ 
+	/*$first_name = $_GET['first_name'];
 	
 	$last_name = $_GET['last_name'];
 
