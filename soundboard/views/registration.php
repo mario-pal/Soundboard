@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if ( isset($_SESSION['user']) && $_SESSION['isAdmin'] == false ){
-		header("Location: ../index.php");
+		header("Location: ../../index.php");
 		die();
 	}
 
