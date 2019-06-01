@@ -70,7 +70,7 @@
 
 		//$sql = "INSERT INTO users (id, first_name, last_name, email, username, password, admin,login_attempts, login_fails, login_success, logouts) VALUES (NULL, '$first_name', '$last_name', '$email', '$username', '$password', FALSE, '0', '0', '0', '0')";
         $todays_date = date('Y-m-d');
-	$sql = "INSERT INTO users (id, username, password, admin,signup_date) VALUES (NULL, '$username', '$password', FALSE, '$todays_date' )";
+	$sql = "INSERT INTO users (user_id, user_name, password, admin, signup_date) VALUES (NULL, '$username', '$password', FALSE, '$todays_date' )";
 	$result = mysqli_query($conn, $sql);
 
 	if( isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == true ){
