@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	require_once '../../../config.inc';
+	require_once '../../../../config.php';
 	
 	if(isset($_SESSION['user'])){
-		header('Location: ../index.php');
+		header('Location: ../../index.php');
 		die();	
 	}
 	else{
@@ -99,7 +99,7 @@
 				unset($_SESSION['lockOut']);
 			}
 
-			header('Location: ../index.php');
+			header('Location: ../../index.php');
 			die();
 
 		}
