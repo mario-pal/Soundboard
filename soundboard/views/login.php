@@ -17,7 +17,7 @@ session_start();
     <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">  
 		
     <!-- Custom narrow bootstrap -->
-    <link href="../../bootstrap/dist/css/jumbotron-narrow.min.css" rel="stylesheet">
+    <link href="../../bootstrap/dist/css/jumbotron-narrow.css" rel="stylesheet">
 
   </head>
 
@@ -28,8 +28,8 @@ session_start();
         <nav>
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
-	    <li class="nav-link" class="active"><a class="nav-link" href="login.php">Login</a></li> 
-	    <li class="nav-link"><a class="nav-link" href="registration.php">Sign up</a></li>
+	    <li class="nav-item" class="active"><a class="nav-link" href="login.php">Login</a></li> 
+	    <li class="nav-item"><a class="nav-link" href="registration.php">Sign up</a></li>
 	</ul>
         </nav>
       </div>
