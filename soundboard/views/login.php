@@ -28,7 +28,7 @@ session_start();
         <nav>
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
-	    <li class="nav-item" class="active"><a class="nav-link" href="login.php">Login</a></li> 
+	    <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li> 
 	    <li class="nav-item"><a class="nav-link" href="registration.php">Sign up</a></li>
 	</ul>
         </nav>
