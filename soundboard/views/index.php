@@ -31,7 +31,7 @@
 	    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
 		<?php 
 			if(isset($_SESSION['user'])){
-				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/dashboard.php\">";
+				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"soundboard/views/dashboard.php\">";
 				echo $username; 
 				echo "'s Dashboard</a></li> \n";
 				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"model/processLogout.php\">";
@@ -39,7 +39,7 @@
 				
 			}
 			else{
-	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"views/login.php\">Login</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./soundboard/views/login.php\">Login</a><li> \n";	
 	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./soundboard/views/registration.php\">Sign up</a><li> \n";	
 			}
 		 ?>	
