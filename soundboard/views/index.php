@@ -34,13 +34,13 @@
 				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"soundboard/views/dashboard.php\">";
 				echo $username; 
 				echo "'s Dashboard</a></li> \n";
-				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"model/processLogout.php\">";
+				echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"soundboard/model/processLogout.php\">";
 				echo "Logout</a></li> \n";
 				
 			}
 			else{
-	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./soundboard/views/login.php\">Login</a><li> \n";	
-	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"./soundboard/views/registration.php\">Sign up</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"/soundboard/views/login.php\">Login</a><li> \n";	
+	echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"/soundboard/views/registration.php\">Sign up</a><li> \n";	
 			}
 		 ?>	
 	</ul>
