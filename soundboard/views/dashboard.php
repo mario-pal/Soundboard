@@ -49,7 +49,11 @@
         <nav>
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
-	    <li class="nav-item"><a class="nav-link active" href="dashboard.php"><? =$username ?>'s Dashboard</a></li>
+	    <?php
+	       echo "<li class=\"nav-item\"><a class=\"nav-link active\" href=\"dashboard.php\">";
+	       echo $username;
+	       echo "'s Dashboard</a></li> \n";
+	    ?>
 	    <li class="nav-item"><a class="nav-link" href="../model/processLogout.php">Logout</a></li>
 	</ul>
         </nav>
