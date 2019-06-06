@@ -12,15 +12,15 @@
 	if(isset($_GET["page"])){ $page = $_GET["page"]; } else { $page=1; };
 	$start_from = ($page-1) * $limit;
 
-	$sql = "SELECT * FROM users WHERE username = '$username'";
+	$sql = "SELECT * FROM users WHERE user_name = '$username'";
 	$rs_result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($rs_result);
 	$userId = (int)$row["id"];
 
-	$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboard WHERE id='$userId' ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
+	$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards WHERE id='$userId' ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
 	if($_SESSION['isAdmin'] == true)
 	{
-		$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboard ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
+		$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
 	}
 	$rs_result = mysqli_query($conn, $sql);
 ?>
@@ -33,7 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Soundboard user's dashboard">
-    <meta name="author" content="Nicholas Yee">
+    <meta name="author" content="Mario">
 
     <title><?=$username?>'s Dashboard</title>
 
@@ -49,20 +49,20 @@
         <nav>
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
-	    <li class="nav-item"><a class="nav-link active" href="dashboard.php">Your Dashboard</a></li>
+	    <li class="nav-item"><a class="nav-link active" href="dashboard.php"> <?php $username?>'s Dashboard</a></li>
 	    <li class="nav-item"><a class="nav-link" href="../model/processLogout.php">Logout</a></li>
 	</ul>
         </nav>
       </div>
 
       <div class="jumbotron text-center">
-      <h1> 
+      <h2> 
 	<?php 
 		if($isAdmin == 1)
 			echo "Admin's ";
 	?>
 		Dashboard
-	</h1>
+	</h2>
 	<p class="lead">
 	</p>
 	<?php if ( $_SESSION['isAdmin'] == 1 ){ ?>
