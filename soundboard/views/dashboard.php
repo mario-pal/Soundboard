@@ -49,20 +49,20 @@
         <nav>
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
-	    <li class="nav-item"><a class="nav-link active" href="dashboard.php"> <?php $username?>'s Dashboard</a></li>
+	    <li class="nav-item"><a class="nav-link active" href="dashboard.php"><?php =$username ?>'s Dashboard</a></li>
 	    <li class="nav-item"><a class="nav-link" href="../model/processLogout.php">Logout</a></li>
 	</ul>
         </nav>
       </div>
 
       <div class="jumbotron text-center">
-      <h2> 
+      <h3> 
 	<?php 
 		if($isAdmin == 1)
 			echo "Admin's ";
 	?>
 		Dashboard
-	</h2>
+	</h3>
 	<p class="lead">
 	</p>
 	<?php if ( $_SESSION['isAdmin'] == 1 ){ ?>
