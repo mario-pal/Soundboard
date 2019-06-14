@@ -57,7 +57,7 @@
 			name="soundboard_name" placeholder="SOUNDBOARD NAME" required> <br> <br>
 
 		<div class="form-group">
-		<input type="text" pattern="[a-zA-Z0-9_]{1,30}" 
+		<input type="text" pattern="[a-zA-Z0-9 ]{1,30}" 
 			title="Alphanumeric characters where input is NOT longer
 			than 30"
 			class="form-control"
