@@ -68,8 +68,8 @@
 		<input type = "checkbox" title = "Make this sounboard
 		public for others to see(default is private )"
 		class = "form-control" name = "public" id = "pub_board">-->
-		<input class="form-check-input" type="checkbox" value="" id="public">
-		<label class="form-check-label" for="public">
+		<input class="form-check-input" type="checkbox" name="public" value="" id="publiccheck">
+		<label class="form-check-label" for="publiccheck">
 		    Make this soundboard public 
 		</label>
 		<br>
