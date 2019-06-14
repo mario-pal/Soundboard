@@ -15,9 +15,9 @@
 	$sql = "SELECT * FROM users WHERE user_name = '$username'";
 	$rs_result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($rs_result);
-	$userId = (int)$row["id"];
+	$userId = (int)$row["user_id"];
 
-	$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards WHERE id='$userId' ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
+	$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards WHERE user_id='$userId' ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
 	if($_SESSION['isAdmin'] == true)
 	{
 		$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards ORDER BY soundboard_id ASC LIMIT $start_from, $limit";

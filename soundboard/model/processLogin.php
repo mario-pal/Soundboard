@@ -64,7 +64,7 @@
 			die();
 		}
 
-		$pepper = pepper;
+		$pepper = 'pepper';
 		$password = md5($pepper.$_GET['password']);
 
 		$sql = "SELECT * FROM `users` WHERE BINARY user_name = '$username' and password = '$password'";
