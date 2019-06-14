@@ -32,7 +32,8 @@
           <ul class="nav nav-tabs">
 	    <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
 	    <li class="nav-item"><a class="nav-link" href="./dashboard.php">
-		<?php echo $_SESSION['user']?>'s Dashboard</a></li> 
+		<?php echo $_SESSION['user']?>'s Dashboard</a></li>
+	    <li class="nav-item"><a class="nav-link" href="../model/processLogout.php">Logout</a></li>
 	</ul>
         </nav>
       </div>
@@ -56,9 +57,9 @@
 			name="soundboard_name" placeholder="SOUNDBOARD NAME" required> <br> <br>
 
 		<div class="form-group">
-		<input type="text" pattern="[a-zA-Z0-9]{1,30}" 
+		<input type="text" pattern="[a-zA-Z0-9_]{1,30}" 
 			title="Alphanumeric characters where input is NOT longer
-			than 20"
+			than 30"
 			class="form-control"
 			name="soundboard_description" placeholder="DESCRIPTION" required> <br><br>
 		
@@ -69,8 +70,7 @@
 		class = "form-control" name = "public" id = "pub_board">
 		<br>
 		<br>
-		<input type="submit" class="btn btn-lg btn-success"  value="Add
-		Soundboard">
+		<input type="submit" class="btn btn-lg btn-success"  value="Add Soundboard">
 	</form> 
 
   </div> <!-- /container -->
