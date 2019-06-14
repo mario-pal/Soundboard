@@ -31,11 +31,11 @@
 	$userID = (int)$getID['user_id'];
 
 	$todays_date = date('Y-m-d');
-	/*$sql = "INSERT INTO soundboards (user_id, soundboard_name, soundboard_image,soundboard_description, public, date_created) 
+	$sql = "INSERT INTO soundboards (user_id, soundboard_name, soundboard_image,soundboard_description, public, date_created) 
 	        VALUES 
-		($userID, '$soundboard_name', NULL, '$soundboard_description', $public, '$todays_date')";*/
+		($userID, '$soundboard_name', NULL, '$soundboard_description', $public, '$todays_date')";
 
-	$sql = "INSERT INTO soundboards (user_id, soundboard_name, soundboard_image,soundboard_description, public) VALUES (30, 'test3', NULL, 'hello', 1)";
+	//$sql = "INSERT INTO soundboards (user_id, soundboard_name, soundboard_image,soundboard_description, public) VALUES (30, 'test3', NULL, 'hello', 1)";
 	$result = mysqli_query($conn, $sql);
 
 		header('Location: ../views/dashboard.php');
