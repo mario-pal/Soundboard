@@ -65,7 +65,7 @@
 		header('Location: ../views/registration.php');
 		die();
 	}*/
-	$pepper = pepper;
+	$pepper = 'pepper';
 	$password = md5($pepper.$_GET['password']);
 
 		//$sql = "INSERT INTO users (id, first_name, last_name, email, username, password, admin,login_attempts, login_fails, login_success, logouts) VALUES (NULL, '$first_name', '$last_name', '$email', '$username', '$password', FALSE, '0', '0', '0', '0')";
