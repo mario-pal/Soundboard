@@ -23,7 +23,7 @@
 	}
 
 	$username = $_SESSION['user'];
-	$sql = "SELECT * FROM users WHERE BINARY username='$username'";
+	$sql = "SELECT * FROM users WHERE BINARY user_name='$username'";
 	$result = mysqli_query($conn, $sql);
 
 	$getID = mysqli_fetch_array($result );
