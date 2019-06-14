@@ -58,16 +58,20 @@
 
 		<div class="form-group">
 		<input type="text" pattern="[a-zA-Z0-9 ]{1,30}" 
-			title="Alphanumeric characters where input is NOT longer
+			title="Alphanumeric characters and spaces here input is NOT longer
 			than 30"
 			class="form-control"
 			name="soundboard_description" placeholder="DESCRIPTION" required> <br><br>
 		
 		<div class = "form-group">
-		<label for = "pub_board">Make this soundboard public? </label>
+		<!--<label for = "pub_board">Make this soundboard public? </label>
 		<input type = "checkbox" title = "Make this sounboard
 		public for others to see(default is private )"
-		class = "form-control" name = "public" id = "pub_board">
+		class = "form-control" name = "public" id = "pub_board">-->
+		<input class="form-check-input" type="checkbox" value="" id="public">
+		<label class="form-check-label" for="public">
+		    Make this soundboard public 
+		</label>
 		<br>
 		<br>
 		<input type="submit" class="btn btn-lg btn-success"  value="Add Soundboard">

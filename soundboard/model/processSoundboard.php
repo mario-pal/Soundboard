@@ -5,12 +5,13 @@
 
 	$soundboard_name = $_GET['soundboard_name'];
 	$soundboard_description = $_GET['soundboard_description'];
-	
+
+	 $soundboard_description_nospaces = str_replace(' ', '', $soundboard_description);
 	//For when user inputs non alphanumeric characters in these fields
 	if( !ctype_alnum($soundboard_name) ||
-	    !ctype_alnum($soundboard_description) ){
+	    !ctype_alnum($soundboard_description_nospaces) ){
 	      $_SESSION['alphanumeric'] = true;
-	      header('Location: ../views/addSounboard.php');
+	      header('Location: ../views/addSoundboard.php');
 	      die();
 	}
 
