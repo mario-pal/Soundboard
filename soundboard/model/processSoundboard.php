@@ -28,7 +28,7 @@
 	$result = mysqli_query($conn, $sql);
 
 	$getID = mysqli_fetch_array($result );
-	$userID = (int)$getID['id'];
+	$userID = (int)$getID['user_id'];
 
 	$todays_date = date('Y-m-d');
 	$sql = "INSERT INTO soundboards (user_id, soundboard_name, soundboard_image,soundboard_description, public, date_created) 
