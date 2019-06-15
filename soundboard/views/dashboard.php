@@ -79,11 +79,11 @@
 	  Your Soundboards
 	</h1>
 	<form action="" method="get">
-        <table class="table" align="left">
+        <table class="table">
 	  <thead>
 	    <tr>
-	      <th>Soundboard Name</th>
-	      <th>Public</th>
+	      <th scope="col">Soundboard Name</th>
+	      <th scope="col">Public</th>
 	    </tr>
 	  </thead>
 	  <tbody align="left">
