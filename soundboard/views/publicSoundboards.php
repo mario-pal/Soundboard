@@ -7,7 +7,7 @@
 	if(isset($_GET["page"])){ $page = $_GET["page"]; } else { $page=1; };
 	$start_from = ($page-1) * $limit;
 
-	$sql = "SELECT * FROM 'soundboards' WHERE public = 1 ORDER
+	$sql = "SELECT * FROM soundboards WHERE public = 1 ORDER
 	BY soundboard_id ASC LIMIT $start_from, $limit";
 
 	$rs_result = mysqli_query($conn, $sql);
@@ -64,7 +64,7 @@
       <table class="table">
         <thead>
           <tr>
-          <th>Soundboard Name</th>
+          <th scope="col">Soundboard Name</th>
           </tr>
         </thead>
         <tbody>
