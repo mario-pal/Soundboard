@@ -61,7 +61,7 @@
 	</div>
 
     <div class ="jumbotron">
-      <table class="table">
+      <table class="table table-striped table-hover">
         <thead>
           <tr>
           <th scope="col">Soundboard Name</th>
