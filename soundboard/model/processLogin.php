@@ -46,7 +46,7 @@
 			die();
 		}
 		
-		$sql = "SELECT * FROM `users` WHERE user_name = '$username'";	
+		$sql = "SELECT * FROM users WHERE user_name = '$username'";	
 		$result = mysqli_query($conn, $sql);
 		if ( (mysqli_num_rows($result) > 0)){
 			$rightUser = true;
@@ -67,16 +67,16 @@
 		$pepper = 'pepper';
 		$password = md5($pepper.$_GET['password']);
 
-		$sql = "SELECT * FROM `users` WHERE BINARY user_name = '$username' and password = '$password'";
+		$sql = "SELECT * FROM users WHERE BINARY user_name = '$username' and password = '$password'";
 		$result = mysqli_query($conn , $sql);
 		if( (mysqli_num_rows($result) == 1)){
 			
-			$sql = "UPDATE `users` 
+			$sql = "UPDATE users 
 			    SET login_attempts = login_attempts + 1
 			WHERE user_name = '".$username."'";
 			mysqli_query($conn, $sql);
 
-			$sql = "UPDATE `users` 
+			$sql = "UPDATE users 
 			    SET login_success = login_success + 1
 			WHERE user_name = '".$username."'";
 			mysqli_query($conn, $sql); 
@@ -107,12 +107,12 @@
 		else{
 			if ($rightUser == true){
 				
-			$sql = "UPDATE `users` 
+			$sql = "UPDATE users 
 			    SET login_fails = login_fails + 1
 			WHERE user_name = '".$username."'";
 			mysqli_query($conn, $sql);
 
-			$sql = "UPDATE `users` 
+			$sql = "UPDATE users 
 			    SET login_attempts = login_attempts + 1
 			WHERE user_name = '".$username."'";
 			mysqli_query($conn, $sql);
