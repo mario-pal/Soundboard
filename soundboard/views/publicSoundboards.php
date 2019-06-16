@@ -61,13 +61,13 @@
 	</div>
 
     <div class ="jumbotron">
-      <table class="table" align="left">
+      <table class="table">
         <thead>
           <tr>
           <th>Soundboard Name</th>
           </tr>
         </thead>
-        <tbody align="left">
+        <tbody>
         <?php
         while($row = mysqli_fetch_assoc($rs_result)){
           $soundboard_id = $row["soundboard_id"];
@@ -76,8 +76,7 @@
       	  <tr>
 	    <td>
 		<?php
-	echo "<a href = \"./soundboard.php?soundboard_id=" . $soundboard_id . "\">" . 
-		$soundboard_name . "</a>"; 
+			echo "<a href = \"./soundboard.php?soundboard_id=" . $soundboard_id . "\">" . $soundboard_name . "</a>"; 
        		#echo $row["soundboard_name"];	
 		?>
 		
