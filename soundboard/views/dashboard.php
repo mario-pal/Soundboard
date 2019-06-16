@@ -59,20 +59,9 @@
         </nav>
       </div>
 
-      <div class="jumbotron text-center">
-      <!--<h3> 
-	<?/*php 
-		if($isAdmin == 1)
-			echo "Admin's ";
-	*/?>
-		Dashboard
-	</h3>-->
-	<p class="lead">
-	</p>
 	<?php if ( $_SESSION['isAdmin'] == 1 ){ ?>
 		<a class="btn btn-lg btn-success" href="list.php" role="button">Admin Control</a>
 	<?php } ?> 
-	</div>
 <!--Soundboard-->
       <div class = "jumbotron text-center">
         <h1>
