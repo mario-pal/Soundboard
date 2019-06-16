@@ -100,7 +100,7 @@
     $row = mysqli_fetch_row($rs_result);
     $total_records = $row[0];
     $total_pages = ceil($total_records / $limit);
-    $pagLink = "<nav><ul class=\"pagination\">";
+    $pagLink = "<nav><ul class=\"pagination justify-content-center\">";
     for ($i = 1; $i<=$total_pages; $i++){
     	$pagLink .= "<li class=\"page-item\" ><a class=\"page-link\" href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
     };
