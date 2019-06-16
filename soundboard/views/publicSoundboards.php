@@ -56,9 +56,8 @@
       </nav>
       </div>
       
-	<div class = pull-left> 
-		Public Soundboards 
-	</div>
+	<h1 class="display-4">Public Soundboards 4</h1>
+
 
     <div class ="jumbotron">
       <table class="table table-striped table-hover">
