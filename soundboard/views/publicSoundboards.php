@@ -95,7 +95,7 @@
       </table>
 
     <?php
-    $sql = "SELECT COUNT(soundboard_id) FROM 'soundboards' WHERE public = 1";
+    $sql = "SELECT COUNT(soundboard_id) FROM soundboards WHERE public = 1";
     $rs_result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_row($rs_result);
     $total_records = $row[0];
