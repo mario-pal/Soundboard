@@ -60,13 +60,13 @@
       </div>
 
       <div class="jumbotron text-center">
-      <h3> 
-	<?php 
+      <!--<h3> 
+	<?/*php 
 		if($isAdmin == 1)
 			echo "Admin's ";
-	?>
+	*/?>
 		Dashboard
-	</h3>
+	</h3>-->
 	<p class="lead">
 	</p>
 	<?php if ( $_SESSION['isAdmin'] == 1 ){ ?>

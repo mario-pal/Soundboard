@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Add/Create Soundboard page">
-    <meta name="author" content="Mario Palma">
+    <meta name="author" content="Mario">
 
     <title>Add new soundboard</title>
 
@@ -68,7 +68,7 @@
 		<input type = "checkbox" title = "Make this sounboard
 		public for others to see(default is private )"
 		class = "form-control" name = "public" id = "pub_board">-->
-		<input class="form-check-input" type="checkbox" name="public" value="" id="publiccheck">
+		<input class="form-check-input" type="checkbox" name="public" value="on" id="publiccheck">
 		<label class="form-check-label" for="publiccheck">
 		    Make this soundboard public 
 		</label>
