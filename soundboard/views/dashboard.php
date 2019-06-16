@@ -93,6 +93,7 @@
 			$soundboard_name = $row["soundboard_name"];
 	    ?>
 		<tr>
+		<th scope="row">1</th>
 		<td>
 		<?php echo "<a href = \"./soundboard.php?soundboard_id=" . $soundboard_id . "\">" . 
 			$soundboard_name . "</a>";
