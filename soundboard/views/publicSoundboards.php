@@ -56,7 +56,7 @@
       </nav>
       </div>
       
-	<h1 class="display-5">Public Soundboards</h1>
+	<h2 class="display-4">Public Soundboards</h2>
 
 
     <div class ="jumbotron">
