@@ -79,8 +79,8 @@
 	  Your Soundboards
 	</h1>
 	<form action="" method="get">
-        <table class="table">
-	  <thead>
+        <table class="table table-striped table-hover">
+	  <thead class="thead-light">
 	    <tr>
 	      <th scope="col">Soundboard Name</th>
 	      <th scope="col">Public</th>
@@ -92,8 +92,7 @@
 			$soundboard_id = $row["soundboard_id"];
 			$soundboard_name = $row["soundboard_name"];
 	    ?>
-		<tr>
-		<th scope="row">1</th>
+		<tr>	
 		<td>
 		<?php echo "<a href = \"./soundboard.php?soundboard_id=" . $soundboard_id . "\">" . 
 			$soundboard_name . "</a>";
