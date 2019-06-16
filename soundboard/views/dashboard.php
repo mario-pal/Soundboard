@@ -86,7 +86,7 @@
 	      <th scope="col">Public</th>
 	    </tr>
 	  </thead>
-	  <tbody align="left">
+	  <tbody>
 	    <?php
 		while($row = mysqli_fetch_assoc($rs_result)){
 			$soundboard_id = $row["soundboard_id"];
