@@ -102,7 +102,7 @@
     $total_pages = ceil($total_records / $limit);
     $pagLink = "<nav><ul class=\"pagination\">";
     for ($i = 1; $i<=$total_pages; $i++){
-    	$pagLink .= "<li><a href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
+    	$pagLink .= "<li class=\"page-item\" ><a class=\"page-link\" href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
     };
     echo $pagLink . "</ul></nav>";
 ?>
@@ -114,14 +114,14 @@
   </body>
 </html>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 $(document).ready(function(){
 $('.pagination').pagination({
-	item: <?php echo $total_records;?>,
-	itemsOnPage: <?php echo $limit;?>,
+	item: <?php //echo $total_records;?>,
+	itemsOnPage: <?php //echo $limit;?>,
 	cssStyle: 'light-theme',
-		currentPage : <?php echo $page;?>,
+		currentPage : <?php //echo $page;?>,
 		hrefTextPrefix : 'publicSoundboards.php?page='
 	});
 });
-</script>
+</script>-->
