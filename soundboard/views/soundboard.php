@@ -88,7 +88,7 @@
 
     <!--SoundBoard-->
       <div id="board">
-        <table border='2' width="100%">
+        <table class="table">
         	<?php
 	while ($row = mysqli_fetch_assoc($result) ){
 		?>
