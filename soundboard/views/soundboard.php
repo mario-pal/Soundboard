@@ -61,7 +61,6 @@
     <div class="container">
       <div class="header clearfix">
 	<nav>
-	  <div class = "pull-left"> <?php echo $soundboard_name; ?>  </div>
           <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link" href="../../index.php">Home</a></li>
             <?php
@@ -80,6 +79,8 @@
 	  </ul>
         </nav>
       </div>
+	
+	<div class = "pull-left"> <?php echo $soundboard_name; ?>  </div>
 	<?php
                 if( $owner_id == $user_id  ){
 			echo "<a class = \"btn btn-success btn-lg\" href = \"./addSound.php?soundboard_id=" . $soundboard_id . "\">Add Sound</a>";
