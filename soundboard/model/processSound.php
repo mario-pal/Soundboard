@@ -3,7 +3,7 @@
 
 	require_once '../../../../config.php';
 
-	function readable_filesize($byte, $decimals = 2){
+	function readable_filesize($bytes, $decimals = 2){
 		$sz = 'BKMGTP';
 		$factor = floor((strlen($bytes) - 1) / 3);
 			return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
@@ -47,7 +47,7 @@
 			die();
 		}
 	}
-	elseif(isset($_FILES['sound_file']['error']])){
+	elseif(isset($_FILES['sound_file']['error'])){
 		$fileUploadErrors = array(
 		    0 => 'No errors in uploading',
 		    1 => 'The chosen file is larger than the permitted file size',
