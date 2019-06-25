@@ -90,10 +90,10 @@
 		<td>
 		  <?php 
 			if($row["public"] == false ){
-				echo No;
+				echo 'No';
 			}
 			else{
-				echo Yes;
+				echo 'Yes';
 			}
 		  ?>
 		</td>
@@ -115,7 +115,7 @@
 </body>
 </html>
 
-<script type="text/javascript">
+i<!--<script type="text/javascript">
 $(document).ready(function(){
 	$('.pagination').pagination({
 	        item: <?php echo $total_records;?>,
@@ -125,5 +125,5 @@ $(document).ready(function(){
 			hrefTextPrefix : 'dashboard.php?page='
 	});
 	});
-</script>
+</script>-->
 
