@@ -118,10 +118,10 @@
 i<!--<script type="text/javascript">
 $(document).ready(function(){
 	$('.pagination').pagination({
-	        item: <?php echo $total_records;?>,
-			itemsOnPage: <?php echo $limit;?>,
+	        item: <?php //echo $total_records;?>,
+			itemsOnPage: <?php //echo $limit;?>,
 			cssStyle: 'light-theme',
-			currentPage : <?php echo $page;?>,
+			currentPage : <?php //echo $page;?>,
 			hrefTextPrefix : 'dashboard.php?page='
 	});
 	});
