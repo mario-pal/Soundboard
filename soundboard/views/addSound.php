@@ -1,14 +1,14 @@
-<?php
+<?php	
 	session_start();
 	require_once '../../../../config.php';
 
 	if ( !(isset($_SESSION['user'])) ){
-	    header("Location: ./login.php");
+	    header("Location: ../../login.php");
 	    die();
 	}
 	define('MAX_BYTE_UPLOAD', '2000000');
 
-	$username = $_SESSION['user'];
+	//$username = $_SESSION['user'];
 	$soundboard_id = $_GET['soundboard_id'];
 	$_SESSION['curr_soundboard_id'] = $soundboard_id;
 
@@ -57,25 +57,55 @@
 			}
 
 			unset($_SESSION['alphanumeric']);
+
+			if(isset($_SESSION['soundStorageError']) && $_SESSION['soundStorageError']){
+			   echo "<div class=\"alert alert-danger\" role=\"alert\">
+			         There was a problem storing the file!
+			         </div>";
+			}
+
+
+			 if(isset($_SESSION['fileTypeError']) && $_SESSION['fileTypeError']){
+				echo "<div class=\"alert alert-warning\" role=\"alert\">
+				      Your chosen file is NOT .mp3 or .wav !
+				        </div>";
+			 }
+
+			 if(isset($_SESSION['uploadError'])){
+			    echo "<div class=\"alert alert-danger\" role=\"alert\">";
+			    echo $_SESSION['uploadError'];
+			    echo "</div>";
+			 }
+
+			 if(isset($_SESSION['fileUploadSuccess']) &&  $_SESSION['fileUploadSuccess']){
+			      echo "<div class=\"alert alert-success\" role=\"alert\">
+			      File was uploaded successfully!
+			      </div>";
+			 }
+
+			 unset($_SESSION['soundStorageError']);
+			 unset($_SESSION['fileTypeError']);
+			 unset($_SESSION['uploadError']);
+			 unset($_SESSION['fileUploadSuccess']);
 		?>
 		
 	</p>
-	<form action="" method="POST" enctype="multipart/form-data" >
+	<form action="../model/processSound.php" method="POST" enctype="multipart/form-data" >
 		<div class="form-group">
-		<input type="text" pattern="[a-zA-Z0-9]{1,29}" 
+		<input type="text" pattern="[a-zA-Z0-9]{1,15}" 
 			title="Alphanumeric characters only" class="form-control"
 			name="sound_name" placeholder="SOUND NAME" required>
 		</div> 
 		<br> <br>
 
-		<div class="form-group">
+		<!--<div class="form-group">
 		<input type="text" pattern="[a-zA-Z0-9 ]{1,20}" 
 			title="Alphanumeric characters where input is NOT longer
 			than 20"
 			class="form-control"
 			name="sound_description" placeholder="DESCRIPTION"> 
 		</div>
-		<br><br>
+		<br><br>-->
 		
 		<div class = "form-group">
 		<input type="file" name="sound_file" id = "sound_file" accept = "audio/*" required/>
@@ -113,7 +143,8 @@
 
 				}
 				//echo "<script>alert(\" $mime \")</script>";
-				$sql = "INSERT INTO sound (soundboard_id, sound_name, sound, sound_image, sound_description) VALUES ($soundboard_id, '$sound_name','$sound', NULL, '$sound_description')";
+	etlocal spell spelllang=en_us
+	<F9>$sql = "INSERT INTO sound (soundboard_id, sound_name, sound, sound_image, sound_description) VALUES ($soundboard_id, '$sound_name','$sound', NULL, '$sound_description')";
 				$result = mysqli_query($conn, $sql);
 				echo "<div class=\"alert alert-success\">
 				<strong>Success!</strong> $name was successfully uploaded</div>";
