@@ -8,12 +8,11 @@
 		$factor = floor((strlen($bytes) - 1) / 3);
 			return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor];
 	}
-
 	
 	$soundboard_id = $_SESSION['curr_soundboard_id'];
 	$sound_name = $_POST['sound_name'];
 
-	 if( !ctype_alnum($soundboard_name)){
+	 if( !ctype_alnum($sound_name)){
 		$_SESSION['alphanumeric'] = true;
 		header('Location: ../views/addSound.php');
 		die();
