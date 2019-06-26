@@ -35,12 +35,12 @@
 			         VALUES ($soundboard_id, '$sound_name','$file_name')";
 			$result = mysqli_query($conn, $sql);
 			$_SESSION['fileUploadSuccess'] = true;
-			header('Location ../views/addSound.php');
+			header('Location: ../views/addSound.php');
 			die();
 		}
 		else{
 			$_SESSION['fileTypeError'] = true;
-			header('Location ../views/addSound.php');
+			header('Location: ../views/addSound.php');
 			die();
 		}
 	}
@@ -57,12 +57,12 @@
 		    8 => 'File upload was interrupted',
 		);
 		$_SESSION['uploadError'] = $fileUploadErrors[$_FILES['sound_file']['error']];
-		header('Location ../views/addSound.php');
+		header('Location: ../views/addSound.php');
 		die();
 	}
 	else{
 		$_SESSION['uploadError'] = 'An unknown error occurred!';
-		header('Location ../views/addSound.php');
+		header('Location: ../views/addSound.php');
 		die();
 	}
 ?>
