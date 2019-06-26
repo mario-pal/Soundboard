@@ -14,7 +14,7 @@
 
 	 if( !ctype_alnum($sound_name)){
 		$_SESSION['alphanumeric'] = true;
-		header('Location: ../views/addSound.php');
+		header('Location: ../views/addSound.php?' . $soundboard_id);
 		die();
 	 }
 
@@ -28,7 +28,7 @@
 			 $soundServerLocation = "../audio/" . $_SESSION['user'] . $file_name;
 			 if(!(move_uploaded_file($_FILES['sound_file']['tmp_name'], $soundServerLocation))){ 
 				$_SESSION['soundStorageError'] = true;
-				header('Location: ../views/addSound.php');
+				header('Location: ../views/addSound.php?' . $soundboard_id);
 				die();
 			 }
 			 $sql = "INSERT INTO sounds (soundboard_id, sound_name, sound_file) 
@@ -39,12 +39,12 @@
 			}else{
 				$_SESSION['fileUploadSuccess'] = true;
 			}
-			header('Location: ../views/addSound.php');
+			header('Location: ../views/addSound.php?' . $soundboard_id);
 			die();
 		}
 		else{
 			$_SESSION['fileTypeError'] = true;
-			header('Location: ../views/addSound.php');
+			header('Location: ../views/addSound.php?' . $soundboard_id);
 			die();
 		}
 	}
@@ -61,12 +61,12 @@
 		    8 => 'File upload was interrupted',
 		);
 		$_SESSION['uploadError'] = $fileUploadErrors[$_FILES['sound_file']['error']];
-		header('Location: ../views/addSound.php');
+		header('Location: ../views/addSound.php?' . $soundboard_id);
 		die();
 	}
 	else{
 		$_SESSION['uploadError'] = 'An unknown error occurred!';
-		header('Location: ../views/addSound.php');
+		header('Location: ../views/addSound.php?' . $soundboard_id);
 		die();
 	}
 ?>
