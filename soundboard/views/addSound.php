@@ -91,6 +91,7 @@
 			 unset($_SESSION['soundStorageError']);
 			 unset($_SESSION['fileTypeError']);
 			 unset($_SESSION['uploadError']);
+			 unset($_SESSION['databaseError']);
 			 unset($_SESSION['fileUploadSuccess']);
 		?>
 		
