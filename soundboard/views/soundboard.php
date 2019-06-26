@@ -99,7 +99,7 @@
 			<?php echo $row["sound_name"]  ?>
 		  </td>
 		   <td>
-		    <?php $sound_file = $row["sound"];?>
+		    <?php $sound_file = $row["sound_file"];?>
 		<audio controls src="<?php echo $sound_file; ?>" ></audio>
 		  </td>
 		  <td>
