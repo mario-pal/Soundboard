@@ -3,6 +3,9 @@
 
 	require_once '../../../../config.php';
 
+	$username = posix_getpwuid(posix_geteuid())['name'];
+	error_log($username,0);
+
 	function readable_filesize($bytes, $decimals = 2){
 		$sz = 'BKMGTP';
 		$factor = floor((strlen($bytes) - 1) / 3);
@@ -37,8 +40,6 @@
 			$_SESSION['fileUploadSuccess'] = true;
 			header('Location ../views/addSound.php');
 			die();
-			echo "<div class=\"alert alert-success\">
-			      <strong>Success!</strong> $file_name was successfully uploaded</div>";
 		}
 		else{
 			$_SESSION['fileTypeError'] = true;
