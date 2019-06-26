@@ -70,7 +70,7 @@
 				        </div>";
 			 }
 
-			 if(isset($_SESSION['uploadError'])){
+			 if(isset($_SESSION['uploadError']) && $_SESSION['uploadError']){
 			    echo "<div class=\"alert alert-danger\" role=\"alert\">";
 			    echo $_SESSION['uploadError'];
 			    echo "</div>";
