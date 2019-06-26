@@ -3,9 +3,6 @@
 
 	require_once '../../../../config.php';
 
-	$username = posix_getpwuid(posix_geteuid())['name'];
-	error_log($username,0);
-
 	function readable_filesize($bytes, $decimals = 2){
 		$sz = 'BKMGTP';
 		$factor = floor((strlen($bytes) - 1) / 3);
