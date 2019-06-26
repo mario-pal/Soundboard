@@ -32,7 +32,7 @@
 				die();
 			 }
 			 $sql = "INSERT INTO sounds (soundboard_id, sound_name, sound_file) 
-			         VALUES ($soundboard_id, '$sound_name','$file_name')";
+			         VALUES ($soundboard_id, '$sound_name','$soundServerLocation')";
 			$result = mysqli_query($conn, $sql);
 			$_SESSION['fileUploadSuccess'] = true;
 			header('Location: ../views/addSound.php');
