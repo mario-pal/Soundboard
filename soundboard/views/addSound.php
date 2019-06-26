@@ -56,7 +56,6 @@
 				echo "Only alphanumeric can be used in fields <br>";
 			}
 
-			unset($_SESSION['alphanumeric']);
 
 			if(isset($_SESSION['soundStorageError']) && $_SESSION['soundStorageError']){
 			   echo "<div class=\"alert alert-danger\" role=\"alert\">
@@ -77,12 +76,18 @@
 			    echo "</div>";
 			 }
 
+			 if(isset($_SESSION['databaseError'])){
+				echo "<div class=\"alert alert-danger\" role=\"alert\">
+					There was a problem with the database!
+				      </div>";
+			}
+
 			 if(isset($_SESSION['fileUploadSuccess']) &&  $_SESSION['fileUploadSuccess']){
 			      echo "<div class=\"alert alert-success\" role=\"alert\">
 			      File was uploaded successfully!
 			      </div>";
 			 }
-
+			 unset($_SESSION['alphanumeric']);
 			 unset($_SESSION['soundStorageError']);
 			 unset($_SESSION['fileTypeError']);
 			 unset($_SESSION['uploadError']);
