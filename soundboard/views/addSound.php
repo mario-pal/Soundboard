@@ -3,7 +3,7 @@
 	require_once '../../../../config.php';
 
 	if ( !(isset($_SESSION['user'])) ){
-	    header("Location: ../../login.php");
+	    header("Location: ./login.php");
 	    die();
 	}
 	define('MAX_BYTE_UPLOAD', '2000000');
