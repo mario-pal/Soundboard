@@ -65,7 +65,7 @@
 
 	<?php
 		if(isset($_SESSION['soundboardDeleted']) && $_SESSION['soundboardDeleted']){
-			echo "<div class=\"alert alert-danger\" role=\"alert\">
+			echo "<div class=\"alert alert-success\" role=\"alert\">
 			  Successfully deleted soundboard!
 			  </div>";
 		}
