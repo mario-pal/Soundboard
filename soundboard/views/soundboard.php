@@ -80,6 +80,21 @@
         </nav>
       </div>
 	
+	<?php
+		if(isset($_SESSION['deletedSound']) && $_SESSION['deletedSound']){
+			echo "<div class=\"alert alert-success\" role=\"alert\">
+			  Sound file deleted
+			  </div>";
+		}
+		elseif(isset($_SESSION['deletedSound']) && !($_SESSION['deletedSound'])){
+			echo " <div class=\"alert alert-danger\" role=\"alert\">
+			  Something went wrong deleting the sound file
+			  </div>";
+		}
+
+		unset($_SESSION['deletedSound']);
+	?>
+
 	<div class = "pull-left"> <?php echo $soundboard_name; ?>  </div>
 	<?php
                 if( $owner_id == $user_id  ){
