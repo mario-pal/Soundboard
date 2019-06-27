@@ -44,7 +44,7 @@
 		//$sql-> execute();
 	}
 	
-	header("Location: ../views/soundboard.php?soundboard_id='$soundboard_id'");
+	header("Location: ../views/soundboard.php?soundboard_id=$soundboard_id");
 	die();
 
 ?>
