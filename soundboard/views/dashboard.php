@@ -67,12 +67,12 @@
 		if(isset($_SESSION['soundboardDeleted']) && $_SESSION['soundboardDeleted']){
 			echo "<div class=\"alert alert-danger\" role=\"alert\">
 			  Successfully deleted soundboard!
-			  </div>"
+			  </div>";
 		}
-		else{
+		elseif(isset($_SESSION['soundboardDeleted']) && !($_SESSION['soundboardDeleted'])){
 			echo "<div class=\"alert alert-danger\" role=\"alert\">
 			Something went wrong deleting the soundboard!
-			</div>"
+			</div>";
 		}
 		unset($_SESSION['soundboardDeleted']);
 	?>
