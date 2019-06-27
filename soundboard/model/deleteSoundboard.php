@@ -13,7 +13,7 @@
 	$userID = (int)$getID['user_id'];
 
 	//$sql = $conn->prepare("DELETE FROM soundboards WHERE soundboard_id= ? AND user_id= ?");
-	$sql = "DELETE FROM soundboards WHERE soundboard_id=" . $soundboard_id . "AND" . "user_id=" . $userID;
+	$sql = "DELETE FROM soundboards WHERE soundboard_id='$soundboard_id' AND user_id='$userID'";
 	//$sql->bind_param('ii', $soundboard_id, $userID);
 	//$sql-> execute();
 
@@ -22,15 +22,17 @@
 		/*$sql = $conn->prepare("DELETE FROM soundboard WHERE soundboard_id= ?");
 		$sql->bind_param('i', $soundboard_id);
 		$sql-> execute();*/
-		$sql = "DELETE FROM soundboards WHERE soundboard_id=" . $soundboard_id;
+		$sql = "DELETE FROM soundboards WHERE soundboard_id='$soundboard_id'";
 	}
 
 	//$result = $sql->get_result();
 	$resultSB = mysqli_query($conn, $sql);
 
-	$sql = "SELECT * FROM sounds WHERE soundboard_id=$soundboard_id";
+	$sql = "SELECT * FROM sounds WHERE soundboard_id='$soundboard_id'";
 	$resultS = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_assoc($rs_result)){
+
+	$sql = "DELETE FROM sounds WHERE soundboard_id='$soundboard_id'";
+	while($row = mysqli_fetch_assoc($resultS)){
 		 unlink($row["sound_file"]);
 	}
 
