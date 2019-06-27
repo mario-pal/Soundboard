@@ -25,7 +25,7 @@
 
 		if($mime == "audio/wav" || $mime == "audio/x-wav" || $mime == "audio/mpeg" ){
 			//the name of the sound file is concatenated to make file names in the server unique to prevent overwriting
-			 $soundServerLocation = "../audio/" . $_SESSION['user'] . $file_name;
+			 $soundServerLocation = "../audio/" . $soundboard_id . $_SESSION['user'] . $file_name;
 			 if(!(move_uploaded_file($_FILES['sound_file']['tmp_name'], $soundServerLocation))){ 
 				$_SESSION['soundStorageError'] = true;
 				header('Location: ../views/addSound.php?soundboard_id=' . $soundboard_id);

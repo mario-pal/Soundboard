@@ -61,7 +61,21 @@
 
 	<?php if ( $_SESSION['isAdmin'] == 1 ){ ?>
 		<a class="btn btn-lg btn-success" href="list.php" role="button">Admin Control</a>
-	<?php } ?> 
+	<?php } ?>
+
+	<?php
+		if(isset($_SESSION['soundboardDeleted']) && $_SESSION['soundboardDeleted']){
+			echo "<div class=\"alert alert-danger\" role=\"alert\">
+			  Successfully deleted soundboard!
+			  </div>"
+		}
+		else{
+			echo "<div class=\"alert alert-danger\" role=\"alert\">
+			Something went wrong deleting the soundboard!
+			</div>"
+		}
+		unset($_SESSION['soundboardDeleted']);
+	?>
 <!--Soundboard-->
       <div class = "jumbotron text-center">
         <h1>
