@@ -25,18 +25,19 @@
 
 	if( !(isset($_SESSION['user']))){
 	       if (! ($visibility)){ 	
-		       //header('Location : publicSoundboards.php ');
+		       header('Location: ./publicSoundboards.php');
 		       die();
 		}
 	}
 	else if($user_id != $owner_id && $visibility == false && $_SESSION['isAdmin'] == false){
-		//header('Location : ../index.php');
+		header('Location : ./publicSoundboards.php');
 		die();
 	}
 	/*==================================================================*/
 	$sql = "SELECT * FROM sounds WHERE soundboard_id = '$soundboard_id'";
 	$result = mysqli_query($conn, $sql);
-	
+
+	$numSounds = mysqli_num_rows($result);
 	$count = 0;
 	define('row_lim', 4);
 	
@@ -103,6 +104,13 @@
         ?>
 
     <!--SoundBoard-->
+    <?php 
+	if($numRows == 0){
+		echo "<div class=\"alert alert-warning\" role=\"alert\">
+		  This soundboard has no sounds yet!
+		  </div>";
+	}
+    ?>
       <div id="board">
         <table class="table">
         	<?php
