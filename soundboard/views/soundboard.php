@@ -127,9 +127,9 @@
 		  </td>
 		  <td>
 			<?php 
-				if(($user_id == $owner_id) || $_SESSION['isAdmin'] == true) { 
+				/*if(($user_id == $owner_id) || $_SESSION['isAdmin'] == true) { 
 					echo '<a href="../views/editSound.php?sound_id='.$row["sound_id"].'">Edit</a>'; 
-				}
+				}*/
 			?>
 		  </td>
 		  <td>
