@@ -8,7 +8,7 @@
 	$start_from = ($page-1) * $limit;
 
 	$sql = "SELECT * FROM soundboards WHERE public = 1 ORDER
-	BY soundboard_id ASC LIMIT $start_from, $limit";
+	BY soundboard_id DESC LIMIT $start_from, $limit";
 
 	$rs_result = mysqli_query($conn, $sql);
 	$total_records = mysqli_num_rows($rs_results);
