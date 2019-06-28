@@ -11,6 +11,7 @@
 	BY soundboard_id ASC LIMIT $start_from, $limit";
 
 	$rs_result = mysqli_query($conn, $sql);
+	$total_records = mysqli_num_rows($rs_results);
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +64,7 @@
       <table class="table table-striped table-hover">
         <thead>
           <tr>
+	  <th scope="col">User</th>
           <th scope="col">Soundboard Name</th>
           </tr>
         </thead>
@@ -71,8 +73,12 @@
         while($row = mysqli_fetch_assoc($rs_result)){
           $soundboard_id = $row["soundboard_id"];
 	  $soundboard_name = $row["soundboard_name"];
+	  $owner = $row["owner_user_id"];
         ?>
       	  <tr>
+	    <td>
+	    <?php echo $owner;?>
+	    </td>
 	    <td>
 		<?php
 			echo "<a href = \"./soundboard.php?soundboard_id=" . $soundboard_id . "\">" . $soundboard_name . "</a>"; 
@@ -80,12 +86,6 @@
 		?>
 		
            </td>
-		   <!-- <td>
-		<a
-		<?php #echo"href=\"./soundboard.php?soundboard_id=" .$row["soundboard_id"]. "\"" ?>
-		><span class = 'glyphicon glyphicon-eye-open'></span>
-		</a>
-		    </td>-->
 	  </tr>
         <?php
         };
@@ -94,10 +94,10 @@
       </table>
 
     <?php
-    $sql = "SELECT COUNT(soundboard_id) FROM soundboards WHERE public = 1";
-    $rs_result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_row($rs_result);
-    $total_records = $row[0];
+    //$sql = "SELECT COUNT(soundboard_id) FROM soundboards WHERE public = 1";
+    //$rs_result = mysqli_query($conn, $sql);
+    //$row = mysqli_fetch_row($rs_result);
+    //$total_records = $row[0];
     $total_pages = ceil($total_records / $limit);
     $pagLink = "<nav><ul class=\"pagination justify-content-center\">";
     for ($i = 1; $i<=$total_pages; $i++){
