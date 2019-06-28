@@ -12,6 +12,7 @@
 
 	$rs_result = mysqli_query($conn, $sql);
 	$total_records = mysqli_num_rows($rs_results);
+	$rowNum = $start_from;
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +65,7 @@
       <table class="table table-striped table-hover">
         <thead>
           <tr>
+	  <th scope="col">#</th>
 	  <th scope="col">User</th>
           <th scope="col">Soundboard Name</th>
           </tr>
@@ -76,6 +78,7 @@
 	  $owner = $row["owner_user_id"];
         ?>
       	  <tr>
+	    <th scope="row">  <?php $rowNum ?> </th>
 	    <td>
 	    <?php echo $owner;?>
 	    </td>
@@ -88,7 +91,7 @@
            </td>
 	  </tr>
         <?php
-        };
+        ++$rowNum;};
         ?>
         </tbody>
       </table>
