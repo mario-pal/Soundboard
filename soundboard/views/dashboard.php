@@ -23,7 +23,7 @@
 		$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
 	}
 	$rs_result = mysqli_query($conn, $sql);
-	$total_records = mysqli_num_rows($rs_results);
+	$total_records = mysqli_num_rows($rs_result);
 ?>
 
 <!DOCTYPE html>
