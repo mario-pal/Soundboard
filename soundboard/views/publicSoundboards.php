@@ -60,7 +60,7 @@
       
 	<h2>Public Soundboards</h2>
 
-
+	
     <div class ="jumbotron">
       <table class="table table-striped table-hover">
         <thead class="thead-dark">
@@ -75,7 +75,7 @@
         while($row = mysqli_fetch_assoc($rs_result)){
           $soundboard_id = $row["soundboard_id"];
 	  $soundboard_name = $row["soundboard_name"];
-	  $owner = $row["owner_user_id"];
+	  $owner = $row["owner_user_name"];
         ?>
       	  <tr>
 	    <th scope="row">  <?php echo ($rowNum+1); ?> </th>
