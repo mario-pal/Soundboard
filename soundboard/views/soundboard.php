@@ -105,7 +105,7 @@
 
     <!--SoundBoard-->
     <?php 
-	if($numRows == 0){
+	if($numSounds == 0){
 		echo "<div class=\"alert alert-warning\" role=\"alert\">
 		  This soundboard has no sounds yet!
 		  </div>";
