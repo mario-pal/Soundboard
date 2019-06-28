@@ -11,7 +11,7 @@
 	BY soundboard_id DESC LIMIT $start_from, $limit";
 
 	$rs_result = mysqli_query($conn, $sql);
-	$total_records = mysqli_num_rows($rs_results);
+	$total_records = mysqli_num_rows($rs_result);
 	$rowNum = $start_from;
 ?>
 
