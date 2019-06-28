@@ -53,7 +53,7 @@
 	<p class="lead">
 		Upload sounds and share them 
 	</p>
-	<p><a class="btn btn-lg btn-success" href="soundboard/views/publicSoundboards.php" role="button">View sounds</a></p>
+	<p><a class="btn btn-lg btn-success" href="soundboard/views/publicSoundboards.php" role="button">View soundboards</a></p>
       </div>
 
       <footer class="footer">
