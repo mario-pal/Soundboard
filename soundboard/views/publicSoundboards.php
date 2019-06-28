@@ -78,7 +78,7 @@
 	  $owner = $row["owner_user_id"];
         ?>
       	  <tr>
-	    <th scope="row">  <?php $rowNum ?> </th>
+	    <th scope="row">  <?php echo $rowNum; ?> </th>
 	    <td>
 	    <?php echo $owner;?>
 	    </td>
