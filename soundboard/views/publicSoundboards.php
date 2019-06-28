@@ -63,7 +63,7 @@
 
     <div class ="jumbotron">
       <table class="table table-striped table-hover">
-        <thead>
+        <thead class="thead-dark">
           <tr>
 	  <th scope="col">#</th>
 	  <th scope="col">User</th>
@@ -78,7 +78,7 @@
 	  $owner = $row["owner_user_id"];
         ?>
       	  <tr>
-	    <th scope="row">  <?php echo $rowNum; ?> </th>
+	    <th scope="row">  <?php echo ($rowNum+1); ?> </th>
 	    <td>
 	    <?php echo $owner;?>
 	    </td>
