@@ -78,6 +78,13 @@
 		unset($_SESSION['soundboardDeleted']);
 	?>
 <!--Soundboard-->
+      <?php 
+      	if($total_records == 0){
+		echo "<div class=\"alert alert-info\" role=\"alert\">
+			You have no soundboards
+		</div>";
+	}
+      ?>
       <div class = "jumbotron text-center">
         <h1>
 	  Your Soundboards
