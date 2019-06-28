@@ -14,7 +14,7 @@
     <meta name="description" content="Soundboard index page">
     <meta name="Author" content="Mario">
 
-    <title>Soundboard Pal</title>
+    <title>Sound Pal</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Soundboard Pal</h1>
+        <h1>Sound Pal</h1>
 	<p class="lead">
 		Upload sounds and share them 
 	</p>
