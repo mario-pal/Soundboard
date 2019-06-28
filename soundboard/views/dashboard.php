@@ -23,6 +23,7 @@
 		$sql = "SELECT soundboard_name, public, soundboard_id FROM soundboards ORDER BY soundboard_id ASC LIMIT $start_from, $limit";
 	}
 	$rs_result = mysqli_query($conn, $sql);
+	$total_records = mysqli_num_rows($rs_results);
 ?>
 
 <!DOCTYPE html>
@@ -124,6 +125,14 @@
 	</table>
 	</form>
 	<a class = "btn btn-success" href = "./addSoundboard.php" role = "button">Add Soundboard</a>
+	<?php
+	  $total_pages = ceil($total_records / $limit);
+	  $pagLink = "<nav><ul class=\"pagination justify-content-center\">";
+	  for ($i = 1; $i<=$total_pages; $i++){
+		  $pagLink .= "<li class=\"page-item\" ><a class=\"page-link\" href='publicSoundboards.php?page=".$i."'>".$i."</a></li>";
+	  };
+	  echo $pagLink . "</ul></nav>";
+	?>
   </div>	
 </div>
 </body>
